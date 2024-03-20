@@ -9,6 +9,9 @@ import SwiftUI
 
 struct PokemonListView: View {
 
+    // API通信を行うクラスを初期化
+    @StateObject var viewModel = PokemonListViewModel()
+
     var body: some View {
         // 実際のViewの大きさからTextやImageの大きさを変更したい時に使用する構造体
         GeometryReader { geometry in

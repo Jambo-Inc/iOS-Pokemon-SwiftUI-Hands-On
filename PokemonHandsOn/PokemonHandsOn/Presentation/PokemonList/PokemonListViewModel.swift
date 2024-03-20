@@ -28,7 +28,7 @@ final class PokemonListViewModel: ObservableObject {
     // ViewModel初期化時に下記のメソッドを行う
     init() {
         fetchPokemonData()
-        fetchPokemonDataList()
+//        fetchPokemonDataList()
     }
 }
 
