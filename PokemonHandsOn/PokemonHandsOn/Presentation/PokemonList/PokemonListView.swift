@@ -20,8 +20,16 @@ struct PokemonListView: View {
                 // 実際に画面に表示される時に描画される処理
                 LazyVGrid(columns: GridItems.columns) {
                     // ForEachを使用して151個モンスターボールを表示する
-                    ForEach(0..<151) { number in
-                        Text("手順2 No.\(number)")
+                    ForEach(viewModel.pokemonListEntity) { pokemon in
+                        // 非同期で画像をロードするコンポーネント
+                        AsyncImage(url: URL(string: pokemon.sprites.frontImage)) { image in
+                            image
+                                // imageをリサイズできるようにする
+                                .image?.resizable()
+                                // 画像の縦横比を維持する
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: geometry.size.width / 3)
+                        }
                             // フレームの大きさをgeometryの大きさから算出する
                             .frame(width: geometry.size.width / 2.1, height: 200)
                             // 背景にコンテンツを設置するモディファイア

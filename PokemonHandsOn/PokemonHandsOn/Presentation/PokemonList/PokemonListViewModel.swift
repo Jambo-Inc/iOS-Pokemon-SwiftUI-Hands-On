@@ -78,7 +78,6 @@ private extension PokemonListViewModel {
                     }
                     responsePokemonEntity.sort { $0.id < $1.id }
                     self.pokemonListEntity = responsePokemonEntity
-                    print(responsePokemonEntity)
                 }
             } catch {
                 // 失敗した場合はエラーを投げる
