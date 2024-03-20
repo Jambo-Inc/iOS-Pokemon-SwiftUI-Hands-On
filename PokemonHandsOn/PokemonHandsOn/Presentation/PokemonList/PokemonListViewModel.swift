@@ -15,7 +15,7 @@ import Foundation
 final class PokemonListViewModel: ObservableObject {
 
     // 取得したポケモンのデータのリストを格納するプロパティ
-    @Published var pokemonList: [PokemonEntity] = []
+    @Published var pokemonListEntity: [PokemonEntity] = []
     // 取得したポケモンのデータを格納するプロパティ
     @Published var pokemonEntity: PokemonEntity?
     // ユーザーがタップしたポケモンのデータを格納するプロパティ
@@ -76,6 +76,8 @@ private extension PokemonListViewModel {
                         let pokemon = try decoder.decode(PokemonEntity.self, from: data)
                         responsePokemonEntity.append(pokemon)
                     }
+                    responsePokemonEntity.sort { $0.id < $1.id }
+                    self.pokemonListEntity = responsePokemonEntity
                     print(responsePokemonEntity)
                 }
             } catch {
