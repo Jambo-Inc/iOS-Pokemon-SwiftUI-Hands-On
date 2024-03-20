@@ -21,14 +21,23 @@ final class PokemonListViewModel: ObservableObject {
     // ユーザーがタップしたポケモンのデータを格納するプロパティ
     @Published var selectedPokemon: PokemonEntity? = nil
 
+    // 画面遷移するかどうかを管理するプロパティ
+    @Published var isNavigateToDetailView = false
+
     // 取得したいポケモンのurlを配列で格納するプロパティ
     // 初期化時に、1~151までを代入したurlを格納する配列
     private var pokemonUrlList: [URL] = (1...151).map { URL(string: "https://pokeapi.co/api/v2/pokemon/\($0)/")! }
 
     // ViewModel初期化時に下記のメソッドを行う
     init() {
-//        fetchPokemonData()
         fetchPokemonDataList()
+    }
+
+    // ポケモンがタップされた時の処理
+    func tappedPokemon(pokemon: PokemonEntity) {
+        selectedPokemon = pokemon
+        // bool値を切り替えて画面遷移を実行
+        isNavigateToDetailView = true
     }
 }
 
