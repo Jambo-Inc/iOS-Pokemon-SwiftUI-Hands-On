@@ -18,6 +18,7 @@
 		621D7B2B2BAAD77700F58C7E /* PokemonFetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D7B2A2BAAD77700F58C7E /* PokemonFetchError.swift */; };
 		621D7B2D2BAAD78100F58C7E /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D7B2C2BAAD78100F58C7E /* PokemonEntity.swift */; };
 		621D7B312BAADE7E00F58C7E /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D7B302BAADE7E00F58C7E /* PokemonDetailView.swift */; };
+		621D7B332BAAEDCD00F58C7E /* GridItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D7B322BAAEDCD00F58C7E /* GridItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		621D7B2A2BAAD77700F58C7E /* PokemonFetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFetchError.swift; sourceTree = "<group>"; };
 		621D7B2C2BAAD78100F58C7E /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		621D7B302BAADE7E00F58C7E /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
+		621D7B322BAAEDCD00F58C7E /* GridItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				621D7AFA2BAAD39000F58C7E /* PokemonHandsOnApp.swift */,
+				621D7B322BAAEDCD00F58C7E /* GridItems.swift */,
 				621D7B292BAAD75D00F58C7E /* DataStore */,
 				621D7B242BAAD52700F58C7E /* Presentation */,
 				621D7AFE2BAAD39100F58C7E /* Assets.xcassets */,
@@ -303,6 +306,7 @@
 			files = (
 				621D7B262BAAD53600F58C7E /* PokemonListView.swift in Sources */,
 				621D7B282BAAD72B00F58C7E /* PokemonListViewModel.swift in Sources */,
+				621D7B332BAAEDCD00F58C7E /* GridItems.swift in Sources */,
 				621D7AFB2BAAD39000F58C7E /* PokemonHandsOnApp.swift in Sources */,
 				621D7B2D2BAAD78100F58C7E /* PokemonEntity.swift in Sources */,
 				621D7B2B2BAAD77700F58C7E /* PokemonFetchError.swift in Sources */,
