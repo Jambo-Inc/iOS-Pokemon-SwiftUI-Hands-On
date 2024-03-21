@@ -15,11 +15,9 @@ import Foundation
 final class PokemonListViewModel: ObservableObject {
 
     // 取得したポケモンのデータのリストを格納するプロパティ
-    @Published var pokemonListEntity: [PokemonEntity] = []
+    @Published var pokemonListData: [PokemonEntity] = []
     // 取得したポケモンのデータを格納するプロパティ
     @Published var pokemonEntity: PokemonEntity?
-    // ユーザーがタップしたポケモンのデータを格納するプロパティ
-    @Published var selectedPokemon: PokemonEntity? = nil
 
     // 取得したいポケモンのurlを配列で格納するプロパティ
     // 初期化時に、1~151までを代入したurlを格納する配列
@@ -27,7 +25,7 @@ final class PokemonListViewModel: ObservableObject {
 
     // ViewModel初期化時に下記のメソッドを行う
     init() {
-        fetchPokemonData()
+//        fetchPokemonData()
         fetchPokemonDataList()
     }
 }
@@ -77,7 +75,7 @@ private extension PokemonListViewModel {
                         responsePokemonEntity.append(pokemon)
                     }
                     responsePokemonEntity.sort { $0.id < $1.id }
-                    self.pokemonListEntity = responsePokemonEntity
+                    self.pokemonListData = responsePokemonEntity
                     print(responsePokemonEntity)
                 }
             } catch {
