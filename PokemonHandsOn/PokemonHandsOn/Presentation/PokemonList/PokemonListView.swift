@@ -22,11 +22,10 @@ struct PokemonListView: View {
                     LazyVGrid(columns: GridItems.columns) {
                         // ForEachを使用して151個モンスターボールを表示する
                         ForEach(viewModel.pokemonListEntity) { pokemon in
-                            // それぞれのポケモンの画像をボタンとして表示する
-                            Button(action: {
-                                // ボタンたタップされた時の処理
-                                viewModel.tappedPokemon(pokemon: pokemon)
-                            }) {
+                            // 画面遷移できるNavigationLinkを実装する
+                            NavigationLink {
+                                PokemonDetailView(pokemon: pokemon)
+                            } label: {
                                 // 非同期で画像をロードするコンポーネント
                                 AsyncImage(url: URL(string: pokemon.sprites.frontImage)) { image in
                                     image
@@ -65,13 +64,6 @@ struct PokemonListView: View {
                             }
                         }
                     }
-                }
-            }
-            // viewModelのisNavigateToDetailViewが切り替わった際に
-            // ポケモンの詳細Viewに遷移する
-            .navigationDestination(isPresented: $viewModel.isNavigateToDetailView) {
-                if let selectedPokemon = viewModel.selectedPokemon {
-                    PokemonDetailView(pokemon: selectedPokemon)
                 }
             }
         }
