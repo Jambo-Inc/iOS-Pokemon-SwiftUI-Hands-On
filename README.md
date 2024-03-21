@@ -28,11 +28,10 @@
 基本的にデータの変更に応じて画面にデータを表示する手法のプログラミング手法を取ります。
 キーワードは、**データバインディング**や**プロパティラッパー**
 
-
 ##### 参考動画
 
 https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI/assets/111261897/4c2d32ba-cf47-4ac5-9972-1bf91d797647
 
-## その他　
+#### zipファイル
 
-[PokemonApp.zip](https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI-Hands-On/files/14712907/PokemonHandsOn.zip)
+[zipファイルをダウンロード](https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI-Hands-On/files/14712930/PokemonHandsOn.zip)
