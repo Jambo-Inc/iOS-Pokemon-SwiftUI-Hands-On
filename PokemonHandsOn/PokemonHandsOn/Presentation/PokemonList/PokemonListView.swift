@@ -10,7 +10,7 @@ import SwiftUI
 struct PokemonListView: View {
 
     // ポケモンボールを2列にするためのGridItem
-    static var columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10, alignment: .center), count: 2)
+    var columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10, alignment: .center), count: 2)
 
     var body: some View {
 

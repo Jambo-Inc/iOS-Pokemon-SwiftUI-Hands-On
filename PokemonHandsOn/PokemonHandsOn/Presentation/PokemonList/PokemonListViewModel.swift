@@ -16,8 +16,6 @@ final class PokemonListViewModel: ObservableObject {
 
     // 取得したポケモンのデータのリストを格納するプロパティ
     @Published var pokemonListData: [PokemonEntity] = []
-    // 取得したポケモンのデータを格納するプロパティ
-    @Published var pokemonEntity: PokemonEntity?
 
     // 取得したいポケモンのurlを配列で格納するプロパティ
     // 初期化時に、1~151までを代入したurlを格納する配列
@@ -25,33 +23,11 @@ final class PokemonListViewModel: ObservableObject {
 
     // ViewModel初期化時に下記のメソッドを行う
     init() {
-//        fetchPokemonData()
         fetchPokemonDataList()
     }
 }
 
 private extension PokemonListViewModel {
-
-    // 図鑑No.1のポケモンを取得する非同期処理
-    func fetchPokemonData() {
-        Task {
-            do {
-                let url = URL(string: "https://pokeapi.co/api/v2/pokemon/1/")!
-                // 指定したurlに対してリクエストを行う
-                let (data, _) = try await URLSession.shared.data(from: url)
-
-                // JSONDecoderをインスタンス
-                let decoder = JSONDecoder()
-                // リクエストしたDataをPokemonEntity型でデコードする
-                pokemonEntity = try decoder.decode(PokemonEntity.self, from: data)
-                print("フシギダネのデータ")
-                print(pokemonEntity)
-            } catch {
-                // 失敗した場合はエラーを投げる
-                throw PokemonFetchError.unknown
-            }
-        }
-    }
 
     // 151匹ポケモンのdataを取得する非同期処理
     func fetchPokemonDataList() {
