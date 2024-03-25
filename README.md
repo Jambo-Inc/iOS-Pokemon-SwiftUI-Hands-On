@@ -34,4 +34,4 @@ https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI/assets/111261897/4c2d32ba-cf47-
 
 #### zipファイル
 
-[zipファイルをダウンロード](https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI-Hands-On/files/14717916/PokemonHandsOn.zip)
+[zipファイルをダウンロード](https://github.com/Jambo-Inc/iOS-Pokemon-SwiftUI-Hands-On/files/14739725/PokemonHandsOn.zip)
